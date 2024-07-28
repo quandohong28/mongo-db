@@ -101,7 +101,7 @@
 - If you are using bash
 
 ```
-    $ echo 'export PATH=/usr/local/bin/mongodb/bin:$PATH' >> ~/.bash_profile
+    $ echo 'export PATH=/usr/local/mongodb/bin:$PATH' >> ~/.bash_profile
 
     $ source ~/.bash_profile
 ```
@@ -109,7 +109,7 @@
 #### Step 6: Make folder to save data
 
 ```
-    $ sudo mkdir -p /usr/local/bin/mongodb/data/db
+    $ sudo mkdir -p /usr/local/mongodb/data/db
 
     $ sudo chown -R $(whoami):staff /usr/local/mongodb/data/db
 
@@ -153,7 +153,7 @@
 - Start MongoDB
 
 ```
-    $ mongod --dbpath /usr/local/bin/mongodb/data/db
+    $ mongod --dbpath /usr/local/mongodb/data/db
 ```
 
 - Using MongoDB Shell
