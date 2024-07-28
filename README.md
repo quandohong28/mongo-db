@@ -1,6 +1,7 @@
 ## MongoDB
 
-- I have compiled MongoDB and MongoDB Compass versions for MacOS. You can download and install them according to the following instructions.
+- I have compiled MongoDB, MongoDB Shell and MongoDB Compass versions for MacOS. You can download and install them according to the following instructions.
+- MongoDB Control Panel is tool help you manage mongo server with button, so easy!
 
 - Official Link:
 
