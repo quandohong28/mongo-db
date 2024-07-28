@@ -1,6 +1,7 @@
 ## MongoDB
 
-- I have compiled MongoDB and MongoDB Compass versions for MacOS. You can download and install them according to the following instructions.
+- I have compiled MongoDB, MongoDB Shell and MongoDB Compass versions for MacOS. You can download and install them according to the following instructions.
+- MongoDB Control Panel is tool help you manage mongo server with button, so easy!
 
 - Official Link:
 
@@ -11,11 +12,27 @@
 
 ## Requirements
 
-- MacOS 10.13 (High Sierra) or higher
+- Mac ARM: MacOS 11 (Big Sur) or higher
+
+- Mac Intel: MacOS 10.13 (High Sierra) or higher
+
+`Check your system device info`
+```
+    $ neofetch
+```
 
 - Python3
 
+```
+    $ python3 --version
+```
+
 - Pip
+
+```
+    $ pip --version
+```
+
 
 #### Mongo (core)
 
@@ -51,9 +68,10 @@
     + [MongoDB Shell 1.10.6](https://downloads.mongodb.com/compass/mongosh-1.10.6-darwin-x64.zip): macOS 10.14 (Mojave) or higher
     + [MongoDB Shell 2.2.12](https://downloads.mongodb.com/compass/mongosh-2.2.12-darwin-x64.zip): macOS 11.0 (Big Sur) or higher
 
+
 ## How to install MongoDB core
 
-#### Step 1: Download the file that matches your device configuration.
+#### Step 1: Download the file that matches your device OS version.
 
 #### Step 2: Open and extract the downloaded file.
 
@@ -106,18 +124,20 @@
     $ mongo --version
 ```
 
+
 ## How to install MongoDB Compass
 
-#### Step 1: Download the file that matches your device configuration.
+#### Step 1: Download the file that matches your device OS version.
 
 #### Step 2: Open and extract the downloaded file.
 
 #### Step 3: Move the extracted file to the `Applications` folder.
 
+
 ## How to install MongoDB Shell
 `using for mongodb version 6.0 or higher`
 
-#### Step 1: Download the file that matches your device configuration.
+#### Step 1: Download the file that matches your device OS version.
 
 #### Step 2: Open and extract the downloaded file.
 
@@ -126,6 +146,7 @@
 ```
     $ sudo mv ~/Downloads/folder-extracted/bin/mongosh /usr/local/mongodb/bin
 ```
+
 
 ## How to run
 
@@ -146,6 +167,7 @@ or
 ```
     $ mongosh
 ```
+
 
 ## MongoDB GUI Control Panel
 
