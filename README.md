@@ -16,9 +16,22 @@
 
 - Mac Intel: MacOS 10.13 (High Sierra) or higher
 
+`Check your system device info`
+```
+    $ neofetch
+```
+
 - Python3
 
+```
+    $ python3 --version
+```
+
 - Pip
+
+```
+    $ pip --version
+```
 
 
 #### Mongo (core)
