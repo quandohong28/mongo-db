@@ -11,6 +11,12 @@
 
 ## Requirements
 
+- MacOS 10.13 (High Sierra) or higher
+
+- Python3
+
+- Pip
+
 #### Mongo (core)
 
 - MacOS ARM64
@@ -44,33 +50,32 @@
 - MacOS Intel
     + [MongoDB Shell 1.10.6](https://downloads.mongodb.com/compass/mongosh-1.10.6-darwin-x64.zip): macOS 10.14 (Mojave) or higher
     + [MongoDB Shell 2.2.12](https://downloads.mongodb.com/compass/mongosh-2.2.12-darwin-x64.zip): macOS 11.0 (Big Sur) or higher
-## How to install
 
-#### Step 1: Download the file that matches your configuration.
+## How to install MongoDB core
 
-#### Step 2: Install MongoDB Compass first.
+#### Step 1: Download the file that matches your device configuration.
 
-#### Step 3: Open and extract the downloaded file.
+#### Step 2: Open and extract the downloaded file.
 
-#### Step 4: Create a new folder named `mongodb`
-
-```
-    $ sudo mkdir -p /usr/local/bin/mongodb
-
-    $ sudo chmod -R 777 /usr/local/bin/mongodb
-```
-
-#### Step 5: Move the extracted files to the `mongodb` folder.
+#### Step 3: Create a new folder named `mongodb`
 
 ```
-    $ sudo mv ~/Downloads/folder-extracted/bin /usr/local/bin/mongodb
+    $ sudo mkdir -p /usr/local/mongodb
+
+    $ sudo chmod -R 777 /usr/local/mongodb
 ```
 
-#### Step 6: Set mongodb as environment variable
+#### Step 4: Move the extracted files to the `mongodb` folder.
+
+```
+    $ sudo mv ~/Downloads/folder-extracted/bin /usr/local/mongodb
+```
+
+#### Step 5: Set mongodb as environment variable
 
 - If you are using zsh
 ```
-    $ echo 'export PATH=/usr/local/bin/mongodb/bin:$PATH' >> ~/.zshrc
+    $ echo 'export PATH=/usr/local/mongodb/bin:$PATH' >> ~/.zshrc
 
     $ source ~/.zshrc
 ```
@@ -83,7 +88,7 @@
     $ source ~/.bash_profile
 ```
 
-#### Step 7: Make folder to save data
+#### Step 6: Make folder to save data
 
 ```
     $ sudo mkdir -p /usr/local/bin/mongodb/data/db
@@ -93,7 +98,7 @@
     $ sudo chmod -R 775 /usr/local/mongodb/data/db
 ```
 
-#### Step 8: Check the installation
+#### Step 7: Check the installation
 
 ```
     $ mongod --version
@@ -101,6 +106,26 @@
     $ mongo --version
 ```
 
+## How to install MongoDB Compass
+
+#### Step 1: Download the file that matches your device configuration.
+
+#### Step 2: Open and extract the downloaded file.
+
+#### Step 3: Move the extracted file to the `Applications` folder.
+
+## How to install MongoDB Shell
+`using for mongodb version 6.0 or higher`
+
+#### Step 1: Download the file that matches your device configuration.
+
+#### Step 2: Open and extract the downloaded file.
+
+#### Step 3: Move the extracted files to the `mongodb` folder.
+
+```
+    $ sudo mv ~/Downloads/folder-extracted/bin/mongosh /usr/local/mongodb/bin
+```
 
 ## How to run
 
@@ -116,8 +141,52 @@
     $ mongo
 ```
 
-or 
+or
 
 ```
     $ mongosh
+```
+
+## MongoDB GUI Control Panel
+
+#### Step 1: Clone the repository
+
+```
+    $ git clone https://github.com/quandohong28/mongo-db.git
+```
+
+#### Step 2: Open the `mongo-db` folder
+
+```
+    $ cd mongo-db
+```
+
+#### Step 3: Install libs
+
+```
+    $ pip install tkinter threading subprocess pyinstaller
+```
+
+#### Step 4: Run the script
+
+```
+    $ python3 mongo-control-panel.py
+```
+
+#### Step 5: Build the app
+
+```
+    $ pyinstaller --onefile mongo-control-panel.py
+```
+
+#### Step 6: Set the app to the `mongodb/bin` folder to run it from anywhere
+
+```
+    $ mv dist/mongo-control-panel /usr/local/mongodb/bin
+```
+
+#### Step 7: Run the app
+
+```
+    $ mongo-control-panel
 ```
