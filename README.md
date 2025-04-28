@@ -18,19 +18,19 @@
 
 `Check your system device info`
 ```
-    $ neofetch
+    neofetch
 ```
 
 - Python3
 
 ```
-    $ python3 --version
+    python3 --version
 ```
 
 - Pip
 
 ```
-    $ pip --version
+    pip --version
 ```
 
 
@@ -78,50 +78,50 @@
 #### Step 3: Create a new folder named `mongodb`
 
 ```
-    $ sudo mkdir -p /usr/local/mongodb
+    sudo mkdir -p /usr/local/mongodb
 
-    $ sudo chmod -R 777 /usr/local/mongodb
+    sudo chmod -R 777 /usr/local/mongodb
 ```
 
 #### Step 4: Move the extracted files to the `mongodb` folder.
 
 ```
-    $ sudo mv ~/Downloads/folder-extracted/bin /usr/local/mongodb
+    sudo mv ~/Downloads/folder-extracted/bin /usr/local/mongodb
 ```
 
 #### Step 5: Set mongodb as environment variable
 
 - If you are using zsh
 ```
-    $ echo 'export PATH=/usr/local/mongodb/bin:$PATH' >> ~/.zshrc
+    echo 'export PATH=/usr/local/mongodb/bin:$PATH' >> ~/.zshrc
 
-    $ source ~/.zshrc
+    source ~/.zshrc
 ```
 
 - If you are using bash
 
 ```
-    $ echo 'export PATH=/usr/local/mongodb/bin:$PATH' >> ~/.bash_profile
+    echo 'export PATH=/usr/local/mongodb/bin:$PATH' >> ~/.bash_profile
 
-    $ source ~/.bash_profile
+    source ~/.bash_profile
 ```
 
 #### Step 6: Make folder to save data
 
 ```
-    $ sudo mkdir -p /usr/local/mongodb/data/db
+    sudo mkdir -p /usr/local/mongodb/data/db
 
-    $ sudo chown -R $(whoami):staff /usr/local/mongodb/data/db
+    sudo chown -R $(whoami):staff /usr/local/mongodb/data/db
 
-    $ sudo chmod -R 775 /usr/local/mongodb/data/db
+    sudo chmod -R 775 /usr/local/mongodb/data/db
 ```
 
 #### Step 7: Check the installation
 
 ```
-    $ mongod --version
+    mongod --version
 
-    $ mongo --version
+    mongo --version
 ```
 
 
@@ -144,7 +144,7 @@
 #### Step 3: Move the extracted files to the `mongodb` folder.
 
 ```
-    $ sudo mv ~/Downloads/folder-extracted/bin/mongosh /usr/local/mongodb/bin
+    sudo mv ~/Downloads/folder-extracted/bin/mongosh /usr/local/mongodb/bin
 ```
 
 
@@ -153,19 +153,19 @@
 - Start MongoDB
 
 ```
-    $ mongod --dbpath /usr/local/mongodb/data/db
+    mongod --dbpath /usr/local/mongodb/data/db
 ```
 
 - Using MongoDB Shell
 
 ```
-    $ mongo
+    mongo
 ```
 
 or
 
 ```
-    $ mongosh
+    mongosh
 ```
 
 
@@ -174,41 +174,41 @@ or
 #### Step 1: Clone the repository
 
 ```
-    $ git clone https://github.com/quandohong28/mongo-db.git
+    git clone https://github.com/quandohong28/mongo-db.git
 ```
 
 #### Step 2: Open the `mongo-db` folder
 
 ```
-    $ cd mongo-db
+    cd mongo-db
 ```
 
 #### Step 3: Install libs
 
 ```
-    $ pip install tkinter threading subprocess pyinstaller
+    pip install tkinter threading subprocess pyinstaller
 ```
 
 #### Step 4: Run the script
 
 ```
-    $ python3 mongo-control-panel.py
+    python3 mongo-control-panel.py
 ```
 
 #### Step 5: Build the app
 
 ```
-    $ pyinstaller --onefile mongo-control-panel.py
+    pyinstaller --onefile --windowed --icon=src/assets/MongoDBManager.icns --name="MongoDB Manager" src/v1/main.py
 ```
 
 #### Step 6: Set the app to the `mongodb/bin` folder to run it from anywhere
 
 ```
-    $ mv dist/mongo-control-panel /usr/local/mongodb/bin
+    mv dist/mongo-control-panel /usr/local/mongodb/bin
 ```
 
 #### Step 7: Run the app
 
 ```
-    $ mongo-control-panel
+    mongo-control-panel
 ```
